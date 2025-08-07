@@ -6,9 +6,7 @@ const NotesList = () => {
   console.log(notes)
   return (
     <div className="flex gap-10 items-center justify-center flex-wrap py-4">
-      {
-        notes.map(note => <NotesCard note={note}/>)
-      }
+      {notes.map(item => <NotesCard note={item} />)}
     </div>
   )
 }
