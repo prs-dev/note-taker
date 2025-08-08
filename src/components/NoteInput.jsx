@@ -26,7 +26,8 @@ const NoteInput = () => {
     // console.log(content.choices[0].message.content)
     const newNote = {
       id: Math.random().toString(16).slice(2),
-      content,
+      content: text,
+      summary: content,
       date: new Date(),
       pinned: false
     }
