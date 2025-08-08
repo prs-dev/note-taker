@@ -25,7 +25,7 @@ const NotesCard = ({ note }) => {
           {/* actions: pin, delete and summarize */}
           <button className="p-1 border shadow-sm rounded-sm border-red-400 hover:bg-red-500" onClick={() => pinNote(note)}>&#128204;</button>
           <button className="p-1 border shadow-sm rounded-sm border-gray-400 hover:bg-gray-400" onClick={() => deleteNote(note)}>&#128465;</button>
-          <button>...</button>
+          <button className="px-1.5 py-0.8 border shadow-sm rounded-sm border-black hover:bg-black hover:text-white">...</button>
         </div>
       </div>
 
