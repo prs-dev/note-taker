@@ -9,7 +9,8 @@ const NotesList = () => {
   console.log(notes)
   return (
     <div className="flex gap-10 items-center justify-center flex-wrap py-4">
-      {notes.filter(i => i.content.includes(debounced)).map(item => <NotesCard note={item} />)}
+      {notes.filter(i => i.content.includes(debounced) && i.pinned).map(item => <NotesCard note={item} />)}
+      {notes.filter(i => i.content.includes(debounced) && !i.pinned).map(item => <NotesCard note={item} />)}
     </div>
   )
 }

@@ -6,7 +6,8 @@ const NotesCard = ({ note }) => {
   const pinNote = useStore(state => state.pinNote)
   // console.log(note)
   return (
-    <div className='h-[200px] min-w-[200px] p-2 bg-gray-200 shadow-md rounded-sm flex flex-col items-center justify-between'>
+    <div className='h-[200px] min-w-[200px] p-2 bg-gray-200 shadow-md rounded-sm flex flex-col items-center justify-between relative'>
+      {note.pinned && <div className="text-xl absolute left-[0px] top-[-10px]">&#128204;</div>}
 
         {/* mardown preview */}
         <Markdown
