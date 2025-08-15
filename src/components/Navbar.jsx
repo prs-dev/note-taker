@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className=''>
       <ul className='h-[50px] w-screen flex items-center justify-between shadow-md p-2'>
         <li>AI note taker</li>
-        <li>day/night</li>
+        {/* <li>day/night</li> */}
       </ul>
     </nav>
   )

@@ -43,7 +43,7 @@ const NotesCard = ({ note }) => {
   <div className="p-2 flex gap-2 items-center justify-between w-full">
     <button className={`${styles.cardbtn} border-red-400 hover:bg-red-500`} onClick={() => pinNote(note)}>&#128204;</button>
     <button className={`${styles.cardbtn} border-gray-400 hover:bg-gray-400`} onClick={() => deleteNote(note)}>&#128465;</button>
-    <button onClick={handleSummarize} className={`${styles.cardbtn} px-2 border-black hover:bg-black hover:text-white`}>...</button>
+    {!note.summary && <button onClick={handleSummarize} className={`${styles.cardbtn} px-2 border-black hover:bg-black hover:text-white`}>...</button>}
     {note.summary && <button className={`${styles.cardbtn}`} onClick={() => setShowSummary(prev => !prev)}>&#129523;</button>}
   </div>
 
